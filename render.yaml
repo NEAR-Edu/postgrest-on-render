@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: near-mainnet-postgrest
+    name: near-testnet-postgrest
     plan: starter
     env: docker
     dockerfilePath: ./postgrest/Dockerfile
@@ -12,10 +12,10 @@ services:
       - key: PGRST_DB_ANON_ROLE
         value: public_readonly
   - type: web
-    name: near-mainnet-swagger
+    name: near-testnet-swagger
     plan: starter
     env: docker
     dockerfilePath: ./swagger/Dockerfile
     envVars:
       - key: API_URL
-        value: https://near-mainnet-postgrest.onrender.com
+        value: https://near-testnet-postgrest.onrender.com
