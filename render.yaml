@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: postgrest
+    name: near-mainnet-postgrest
     env: docker
     dockerfilePath: ./postgrest/Dockerfile
     plan: standard
@@ -14,9 +14,9 @@ services:
       - key: PGRST_SERVER_PROXY_URI
         value: 'http://127.0.0.1:3000'
   - type: web
-    name: swagger
+    name: near-mainnet-swagger
     env: docker
     dockerfilePath: ./swagger/Dockerfile
     envVars:
       - key: API_URL
-        value: http://localhost:3000
+        value: http://near-mainnet-postgrest.onrender.com
