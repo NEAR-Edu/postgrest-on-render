@@ -20,4 +20,4 @@ services:
     dockerfilePath: ./swagger/Dockerfile
     envVars:
       - key: API_URL
-        value: http://near-mainnet-postgrest.onrender.com
+        value: https://near-mainnet-postgrest.onrender.com
