@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: postgrest
+    env: docker
+    dockerfilePath: ./postgrest/Dockerfile
+    plan: standard
+    envVars:
+      - key: PGRST_DB_URI
+        value: postgres://public_readonly:nearprotocol@104.199.89.51/mainnet_explorer
+      - key: PGRST_DB_SCHEMA
+        value: public
+      - key: PGRST_DB_ANON_ROLE
+        value: public_readonly
+      - key: PGRST_SERVER_PROXY_URI
+        value: 'http://127.0.0.1:3000'
+  - type: web
+    name: swagger
+    env: docker
+    dockerfilePath: ./swagger/Dockerfile
+    envVars:
+      - key: API_URL
+        value: http://localhost:3000
