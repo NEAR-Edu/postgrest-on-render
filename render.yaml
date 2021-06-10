@@ -11,8 +11,6 @@ services:
         value: public
       - key: PGRST_DB_ANON_ROLE
         value: public_readonly
-      - key: PGRST_SERVER_PROXY_URI
-        value: 'http://127.0.0.1:3000'
   - type: web
     name: near-mainnet-swagger
     plan: starter
