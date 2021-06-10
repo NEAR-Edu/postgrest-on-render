@@ -1,9 +1,9 @@
 services:
   - type: web
     name: near-mainnet-postgrest
+    plan: starter
     env: docker
     dockerfilePath: ./postgrest/Dockerfile
-    plan: standard
     envVars:
       - key: PGRST_DB_URI
         value: postgres://public_readonly:nearprotocol@104.199.89.51/mainnet_explorer
@@ -15,6 +15,7 @@ services:
         value: 'http://127.0.0.1:3000'
   - type: web
     name: near-mainnet-swagger
+    plan: starter
     env: docker
     dockerfilePath: ./swagger/Dockerfile
     envVars:
