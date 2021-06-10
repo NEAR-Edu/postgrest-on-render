@@ -6,7 +6,7 @@ services:
     dockerfilePath: ./postgrest/Dockerfile
     envVars:
       - key: PGRST_DB_URI
-        value: postgres://public_readonly:nearprotocol@104.199.89.51/mainnet_explorer
+        value: postgres://public_readonly:nearprotocol@35.184.214.98/testnet_explorer
       - key: PGRST_DB_SCHEMA
         value: public
       - key: PGRST_DB_ANON_ROLE
