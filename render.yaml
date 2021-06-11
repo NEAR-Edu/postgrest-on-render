@@ -11,11 +11,3 @@ services:
         value: public
       - key: PGRST_DB_ANON_ROLE
         value: public_readonly
-  - type: web
-    name: near-mainnet-swagger
-    plan: starter
-    env: docker
-    dockerfilePath: ./swagger/Dockerfile
-    envVars:
-      - key: API_URL
-        value: https://near-mainnet-postgrest.onrender.com
