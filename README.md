@@ -1,8 +1,8 @@
 # PostgREST & Swagger on render.com
 
-This repo is used to deploy [PostgREST](https://postgrest.org/en/stable/install.html#docker) with optional Swagger interface for exploring the underlying API
+This repo is used to deploy [PostgREST](https://postgrest.org/en/stable/install.html#docker)
 
-2 branches: 
+2 branches:
 - `main` is configured to launch a MainNet PostgREST instance
 - `testnet` is configured to launch a TestNet PostgREST instance
 
